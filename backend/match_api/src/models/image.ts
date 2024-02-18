@@ -1,24 +1,20 @@
 import { Document, Schema, Model, model, Error } from "mongoose";
 
 export interface IImage extends Document {
-    room_id: string;
-    email: string;
-    displayName: string;
-    options: { [key: string]: any };
+    image_id: string;
+    clicks: number;
 }
 
 export const imageSchema: Schema = new Schema({
-    room_id: {
+    image_id: {
         type: String,
         required: true,
         unique: true,
     },
-    email: String,
-    displayName: String,
-    options: {
-        type: Schema.Types.Mixed,
+    clicks: {
+        type: Number,
         required: true,
-    },
+    }
 });
 
 export const Image: Model<IImage> = model<IImage>("Image", imageSchema);

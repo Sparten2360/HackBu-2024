@@ -14,7 +14,7 @@ async function generateID() {
 }
 
 export class ImageController {
-    public async getImages(req: Request, res: Response): Promise<void> {
+    public async getMatch(req: Request, res: Response): Promise<void> {
         const images = await Image.find();
         res.json({ images });
     }

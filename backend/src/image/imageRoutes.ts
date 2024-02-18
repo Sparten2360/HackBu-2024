@@ -11,7 +11,7 @@ export class ImageRoutes {
     }
 
     routes() {
-        this.router.get("/", this.codeboardController.getImages);
+        this.router.get("/", this.codeboardController.getMatch);
         this.router.get("/:id", this.codeboardController.getImage);
         this.router.post("/", this.codeboardController.createImage);
         this.router.put("/:id", this.codeboardController.updateImage);

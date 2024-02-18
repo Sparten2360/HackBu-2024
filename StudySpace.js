@@ -1,9 +1,13 @@
-console.log('hello world');
+
 function buttonClicked() {
-    var x = document.createElement("BUTTON");
-    // making a image into a button using java script
-    let count = 0;
-    var t = document.createTextNode(count += 1);
-    x.appendChild(t);
-    document.body.appendChild(x);
+    var button = document.getElementById("imageButton");
+    var button2 = document.getElementById("imageButton2");
+    if (button.classList.contains("highlighted")) {
+        button.classList.remove("highlighted");
+        button2.classList.add("highlighted");
+    } else {
+        button.classList.add("highlighted");
+        button2.classList.remove("highlighted");
+    }
+    console.log("Button clickd!");
 }

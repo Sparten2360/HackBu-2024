@@ -2,10 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        voteMessage {
+            font-size: 30px;
+            margin: 0 50px;
+        }
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            margin: 0 750px;
+        }
+
+        img {
+            width: 500px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .highlighted {
+            border: 10px solid lightseagreen; /* Adjust border style as needed */
+        }
+    </style>
     <title>StudySpace</title>
     <script src = "StudySpace.js"></script>
 </head>
 <body>
+<voteMessage id="voteMessage">Vote for your favorite image!</voteMessage>
 <button id="imageButton" onclick="buttonClicked()">
     <img src="https://i.ibb.co/YRbmjzp/shawn.jpg" alt="Button Image">
 </button>

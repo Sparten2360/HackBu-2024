@@ -2,7 +2,7 @@
   "name": "match_api",
   "version": "1.0",
   "scripts": {
-    "build": "npm run tsc",
+    "build": "tsc",
     "serve": "node dist/server.js",
     "start": "npm run serve"
   },

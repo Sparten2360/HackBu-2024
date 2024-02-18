@@ -2,7 +2,7 @@ import express from "express";
 import compression from "compression";
 import cors from "cors";
 import { PORT } from "./util/secrets";
-import { ImageRoutes } from "./routes/imageRoutes"
+import { ImageRoutes } from "./image/imageRoutes"
 
 class Server {
     public app: express.Application;
@@ -14,8 +14,8 @@ class Server {
     }
 
     public routes(): void {
-        this.app.use("/api/image", new ImageRoutes().router);
-        this.app.get("/api", (req, res) => res.send({ status: "I'm alive!" }));
+        this.app.use("/image", new ImageRoutes().router);
+        this.app.get("/", (req, res) => res.send({ status: "I'm alive!" }));
     }
 
     public config(): void {

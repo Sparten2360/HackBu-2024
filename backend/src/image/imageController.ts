@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { IImage, Image } from "../models/image";
+import { IImage, Image } from "./image";
 import crypto from "crypto";
 
 async function generateID() {

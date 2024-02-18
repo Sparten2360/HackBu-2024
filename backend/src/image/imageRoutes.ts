@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { ImageController } from "../controllers/imageController";
+import { ImageController } from "./imageController";
 
 export class ImageRoutes {
     public router: Router;
